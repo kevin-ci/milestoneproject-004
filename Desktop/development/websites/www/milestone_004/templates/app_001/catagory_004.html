@@ -1,0 +1,45 @@
+{% extends 'app_001/base_003.html' %}
+{% block body_block %}
+
+<section class="page-section about" id="architecture">
+        <div class="container">
+    
+            <!-- Portfolio Section Heading -->
+            <h2 class="cat-heading page-section-heading text-center text-uppercase text-secondary mb-0">Catagory Four</h2>
+            <!-- Icon Divider -->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+               
+            </div>
+            
+    
+    </section>
+    
+       
+    
+    
+    
+        <div class="row">
+    {% for images in catagory_001 %}
+            <figure class="col-md-4">
+                <div id="wrapper-002"> 
+            
+                <a href="{{ images.url }}" width=400 class="hover"
+              data-responsive="true"
+              data-lightbox="mygallery"
+              data-title="{{ images.name }}">
+                        <div class="product" ></div>
+                        <img alt="picture" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"
+                            class="img-fluid"></a><br><br>
+                    <p class="text-002 lead">{{ chapel.name }}</p>
+                </div>
+                
+            </figure>
+         {% endfor %}
+         </div>
+         <br><br>
+    </div>
+
+
+
+{% endblock %}
